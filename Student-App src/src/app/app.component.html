@@ -1,0 +1,8 @@
+
+<app-header></app-header>
+<h1  *ngIf="uname != null" >WELCOME TO DASHBOARD</h1>
+<a routerLink="/displaylist" *ngIf="uname != null">Display All Students </a>
+
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>

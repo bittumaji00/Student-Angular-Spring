@@ -1,0 +1,32 @@
+<p>displaylist works!</p>
+
+<h1>Display List of Students</h1>
+
+<div>
+    
+
+<div class="container col-md-6">
+<table class="table table-dark">
+
+
+<tr><th>ID</th><th>Name</th><th>DOB</th><th>Gender</th><th>EMail</th><th>PhoneNo</th><th>Course</th><th>Update</th><th>Status</th><th>Delete</th></tr>
+
+<tr *ngFor="let student of students" ><td>{{student.id}}</td><td>{{student.uname}}</td><td>{{student.dob}}</td><td>{{student.gender}}</td><td>{{student.email}}</td><td>{{student.phone}}</td><td>{{student.course}}</td>
+
+<td>
+<button (click)="updateStudent(student.id)" class="btn btn-sm btn-info" >
+Update</button></td>
+<td>
+<button (click)="updateStatus(student)" class="btn btn-sm btn-warning">
+    {{student.status}}</button></td>
+    <td>
+<button (click)="deleteStudent(student.id)" class="btn btn-sm btn-danger">
+    Delete</button></td>
+
+</tr>
+
+
+
+</table>
+
+</div>
